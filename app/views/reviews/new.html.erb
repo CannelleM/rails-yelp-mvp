@@ -1,0 +1,10 @@
+<div class="m-3">
+  <h1>Leave a review:</h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :rating , :collection => [0, 1, 2, 3, 4, 5]%>
+    <%= f.input :content %>
+    <p class= "fst-italic">all fiels with * are mandatory</p>
+    <%= f.submit class:"btn btn-primary"%>
+  <% end %>
+  <%= link_to "Back to restaurants list", restaurants_path, class: "btn btn-outline-primary mt-2" %>
+</div>

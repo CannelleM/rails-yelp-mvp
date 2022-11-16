@@ -1,0 +1,12 @@
+<div class="m-3">
+  <h1>Create a new restaurant</h1>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :category , :collection => CATEGORY %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <p class= "fst-italic">all fiels with * are mandatory</p>
+    <%= f.submit class:"btn btn-primary"%>
+  <% end %>
+  <%= link_to "Back to restaurants list", restaurants_path, class: "btn btn-outline-primary mt-2" %>
+</div>
